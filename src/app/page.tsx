@@ -1,9 +1,19 @@
 "use client";
 
-import { useState } from "react";
-import EscompteCalculator from "@/components/EscompteCalculator";
+import React, { lazy, useState } from "react";
+/*import EscompteCalculator from "@/components/EscompteCalculator";
 import AnnuiteCalculator from "@/components/AnnuiteCalculator";
-import EmpruntCalculator from "@/components/EmpruntCalculator";
+import EmpruntCalculator from "@/components/EmpruntCalculator";*/
+
+const EscompteCalculator = React.lazy(
+	() => import("@/components/EscompteCalculator"),
+);
+const AnnuiteCalculator = React.lazy(
+	() => import("@/components/AnnuiteCalculator"),
+);
+const EmpruntCalculator = React.lazy(
+	() => import("@/components/EmpruntCalculator"),
+);
 
 type CalculatorType = "escompte" | "annuite" | "emprunt";
 
